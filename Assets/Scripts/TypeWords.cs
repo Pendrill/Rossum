@@ -35,6 +35,19 @@ public class TypeWords : MonoBehaviour
             }else //if there are no inputs for either the password of the username
             {
                 Debug.Log("either password or username was not entered, redo accordingly"); //don't let the player proceed to the desktop's loading screen
+                GameManager.instance.setCurrentState(GameManager.GameState.Wait); //set the state to wait
+                if (GameManager.instance.username.Trim().Equals("".Trim())) //checks if the username is still an empty string
+                {
+                    UI_username.text = "New Username"; //if it is, we have it display the "new username"
+                    UI_username.fontStyle = FontStyle.Italic; //and return to italic
+                    UI_username.color = Color.red; //and the color red
+                }
+                if (GameManager.instance.password.Trim().Equals("".Trim())) //we check the same thing for the password
+                {
+                    UI_password.text = "New Password"; //if it is we have it display the "new password" text
+                    UI_password.fontStyle = FontStyle.Italic; // have it be in italics
+                    UI_password.color = Color.red; // and be in red
+                }
             }
         }
     }

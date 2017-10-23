@@ -209,4 +209,13 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Accessed through a button in the scene. Starts the Rossum app
+    /// </summary>
+    public void Rossum()
+    {
+        RossumExe.SetActive(true);
+        DesktopGameObject.SetActive(false);
+    }
+
 }
