@@ -1,0 +1,12 @@
+22/11/2084 16:54:03 Miles Kelp, status: HUMAN
+23/11/2084 17:01:23 Samantha Kelp, status: ROBOT
+09/12/2084 08:14:45 Celine Arken, status: ROBOT
+24/12/2084 19:27:56 Simon Morton, status: ROBOT
+31/12/2084 10:31:06 Geraldine Munoz, status: ROBOT
+07/01/2085 20:21:11 Ignacio Pena, status: HUMAN
+10/01/2085 21:15:14 Jackie Harper, status: ROBOT
+21/02/2085 04:18:25 April Green, status: ROBOT
+13/03/2085 06:34:31 Lois Howard, status: HUMAN
+19/03/2085 15:03:49 Norman Gilbert, status: ROBOT
+02/05/2085 11:59:54 Francis Harrison, status: ROBOT
+26/07/2085 12:36:10 Grace Wong, status: ROBOT
