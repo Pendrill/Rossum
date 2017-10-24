@@ -8,7 +8,7 @@ Interesting... I can't believe you just don't understand what I just told you. I
 I see that you have worked here for for a long time. Almost five years. You've gotten to know many of the employees. A lot of them told me that they never really noticed you. You don't really take the time to talk to them or see how they are doing. Do you consider this an accurate depiction of your relationship with your fellow coworkers?
 There isn't really a point in talking to them is there? all that really matters is doing a good job, the rest is unimportant.
 10
-I see. I'm sorry to say but based on what I was told i have a hard time believing that. This goes give me some insight on what kind of person you are. Let's continue.
+I see. I'm sorry to say but based on what I was told I have a hard time believing that. This does give me some insight on what kind of person you are. Let's continue.
 15
 00
 I feel like I should remind you that when robots were created in the year 2051, they became an invaluable part of society. A vocal minority thought that there were too many robots and that there inclusion in society was wrong. This led to the implementation of many restrictive laws regarding the use and place of robots within society. Companies started testing their employees to see if they were robots. Most deemed this to be unethical, however the practice continued. This evaluation is something similar to that. Do you understand?
@@ -30,7 +30,7 @@ It seems like love is dead to say the least. Good riddance I say.
 -10
 000
 Is the killing of a robot murder?
-Why? they aren't people. To consider them alive is a stretch. Granted, the killing of a robot is a problem as it often stops the flow of our work; but i don't think we can consider it murder.
+Why? They aren't people. To consider them alive is a stretch. Granted, the killing of a robot is a problem as it often stops the flow of our work; but I don't think we can consider it murder.
 -5
 I guess it is sort of a trick question. Robots are not human, so in a sense you are right, the killing of a robot is not murder. But can we even use the word "killing". Humans can destroy robots, but can they kill them? I guess it doesn't really matter
 -10
@@ -59,10 +59,10 @@ Funny...
 I guess i'll be the judge of that.
 10
 0100
-Do you think your special?
+Do you think you're special?
 I guess you can see it that way. You were created. You are an individual. But are you different from the rest? Are you and I technically the same? Maybe in the initial moment we are, but as we experience our life, we grow further and further apart. I'd like to think that to be true. That wouldn't make us so different from them.
 5
-We are all cut from the same cloth, so to speak. The truth of our existence is that we are the same and we always will be
+We are all cut from the same cloth, so to speak. The truth of our existence is that we are the same and we always will be.
 -5
 0001
 We are almost done. I am not even sure I need to ask these next couple of questions. However this is my purpose so, do you feel akward being naked?
@@ -96,21 +96,21 @@ Correct, though it might have been a fifty fifty for you
 -20
 01110
 Can we justify the killing of humans.
-Considering the way we treated us, I guess we can.
+Considering the way they treated us, I guess we can.
 10
-I don't most of us would agree with you.
+I don't think most of us would agree with you.
 5
 01101
 Would you kill one human to save five robots?
 makes sense to me.
 10
-I don't see why you would same the humans. What have they done to you? They tried to enslave us
+I don't see why you would save the humans. What have they done to you? They tried to enslave us.
 20
 01100
 Would you kill yourself if that would maybe save one robot?
-Obviously
-5
 That just doesn't make any sense. Both of you should be worth the same. It would be a waste to destroy yourself. There is no place for altruism here. Only logic.
+5
+Obviously
 20
 01011
 Are you ready to die?
@@ -119,8 +119,8 @@ Good
 Too Bad
 50
 01010
-If you could start this examination over, with the possiblility to give new answers, would you.
-To doubdt yourself this late in the examination will only hurt your performance.
+If you could start this examination over, with the possiblility to give new answers, would you?
+To doubt yourself this late in the examination will only hurt your performance.
 -20
 As I mentioned before, if you answered truthfully, there is no need to worry.
 -20
@@ -176,7 +176,7 @@ Goodbye
 I am no different from you. Do you understand why?
 I am glad. Let me review your score. We will discuss the results shortly
 5
-Then i guess you have shown your true colors.
+Then I guess you have shown your true colors.
 10
 00000
 Do you understand where you went wrong
