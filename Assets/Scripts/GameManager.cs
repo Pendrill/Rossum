@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour {
 
         }
 
-        if (Input.GetMouseButtonDown(0) && !rossum && currentState != GameState.LoggingIn) //we check whether the player is clicking.
+        if (Input.GetMouseButtonDown(0) && !rossum && currentState != GameState.LoggingIn && currentState != GameState.Desktop) //we check whether the player is clicking.
         {
             try
             {
