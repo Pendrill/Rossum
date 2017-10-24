@@ -8,9 +8,9 @@ public class GameManager : MonoBehaviour {
     //create a singleton of the GameManager, in case other scripts need to know stuff like what state we are in.
     public static GameManager instance = new GameManager();
     //The player will enter a name and a password at the beginning of the game. Mostly a game feel thing
-    public string username, password, playerResponse, AIResponse;
+    public string username, password;//, playerResponse, AIResponse;
 
-    public enum GameState { Wait, PlayerTyping, AITyping, LoggingIn, Desktop, InApp}; //list of the different states the game can be in
+    public enum GameState { Wait, PlayerTyping, AITyping, LoggingIn, Desktop, Transition, gameEnd, restart}; //list of the different states the game can be in
     public GameState currentState; //keeps track of the state the game is currently in
 
     float lastStateChange = 0.0f; //tracks time that has passed since the last state change
@@ -34,15 +34,55 @@ public class GameManager : MonoBehaviour {
 
     System.DateTime moment;
 
+    public TextAsset allDialogue;
+    public string[] dialogue;
+    bool AIreply = false;
+
+    public Dictionary<string, Dialogues> indDialogues = new Dictionary<string, Dialogues>();
+    string currentKey = "0", nextKey;
+
+    public Text AIQuestion, playerResponse, AIResponse, playerTyping;
+
+    bool rossum = false;
+    bool recognizedWord = false;
+    string AIYN = "";
+
+    string[] yes = { "yes", "yeah", "yep", "ye", "yah", "y", "yh", "affirmative"};
+    string[] no = { "no", "nope", "n", "nah", "nay", "negative", "nah fam" };
+
+    public int persuasion = 50;
+
+    int questionCounter = 0;
+
+    public Text prevCand;
+
     // Use this for initialization
     void Start () {
         //apply the singleton
         instance = this;
+        dialogue = allDialogue.text.Split('\n');
+        for(int i = 0; i < dialogue.Length; i += 6)
+        {
+            indDialogues.Add(dialogue[i].Trim(), new Dialogues(dialogue[i], dialogue[i + 1], dialogue[i + 2], dialogue[i + 3], dialogue[i+4], dialogue[i+5]));
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            if (rossum && currentState == GameState.PlayerTyping)
+            {
+                playerResponse.text = playerTyping.text;
+                playerTyping.text = "";
+                AIreply = true;
+                setCurrentState(GameState.AITyping);
+            }
+
+        }
+
+        if (Input.GetMouseButtonDown(0) && !rossum && currentState != GameState.LoggingIn)
         {
             try
             {
@@ -102,7 +142,78 @@ public class GameManager : MonoBehaviour {
                 break;
 
             case GameState.AITyping: //state in which the AI is responding to the player or is asking them a question
-
+                playerTyping.color = Color.green;
+                if (!AIreply)
+                {
+                    if(getStateElapsed() > waitTime)
+                    {
+                        if(AIQuestion.text.Length != indDialogues[currentKey.Trim()].Question.Length)
+                        {
+                           AIQuestion.text += indDialogues[currentKey.Trim()].Question[currentLetterCount];
+                            if(currentLetterCount < indDialogues[currentKey.Trim()].Question.Length - 1)
+                            {
+                                currentLetterCount += 1;
+                            }
+                        }
+                        else
+                        {
+                            AIQuestion.text = indDialogues[currentKey.Trim()].Question;
+                            currentLetterCount = 0;
+                            waitTime = 0.95f;
+                            setCurrentState(GameState.PlayerTyping);
+                        }
+                        waitTime += 0.05f;
+                    }
+                }
+                else
+                {
+                    if(!recognizedWord) {
+                        for (int i = 0; i < yes.Length; i++) {
+                            if (playerResponse.text.Trim().Equals(yes[i].Trim())) {
+                                recognizedWord = true;
+                                AIYN = indDialogues[currentKey.Trim()].yes;
+                                persuasion += indDialogues[currentKey.Trim()].powerY;
+                                nextKey = currentKey + "1";
+                            }
+                        }
+                        for (int i = 0; i < no.Length; i++)
+                        {
+                            if (playerResponse.text.Trim().Equals(no[i].Trim()))
+                            {
+                                recognizedWord = true;
+                                AIYN = indDialogues[currentKey.Trim()].no;
+                                persuasion -= indDialogues[currentKey.Trim()].powerN;
+                                nextKey = currentKey + "0";
+                            }
+                        }
+                    }
+                    if (!recognizedWord)
+                    {
+                        playerResponse.text = "";
+                        setCurrentState(GameState.PlayerTyping);
+                        playerTyping.color = Color.red;
+                    }else
+                    {
+                        if(getStateElapsed() > waitTime)
+                        {
+                            if(AIResponse.text.Length != AIYN.Length)
+                            {
+                                AIResponse.text += AIYN[currentLetterCount];
+                                if(currentLetterCount < AIYN.Length - 1)
+                                {
+                                    currentLetterCount += 1;
+                                }
+                            }else
+                            {
+                                AIResponse.text = AIYN;
+                                currentLetterCount = 0;
+                                waitTime = 0.95f;
+                                setCurrentState(GameState.Transition);
+                            }
+                            waitTime += 0.05f;
+                        }
+                    }
+                }
                 break;
 
             case GameState.LoggingIn:
@@ -128,7 +239,8 @@ public class GameManager : MonoBehaviour {
                 }
                 if(getStateElapsed() > 12.0f)
                 {
-                    waitTime = 0;
+                    waitTime = 1;
+                    currentLetterCount = 0;
                     welcomeMessageUI.gameObject.SetActive(false);
                     time = 0.0f;
                     loginGameObject.SetActive(false);
@@ -146,6 +258,73 @@ public class GameManager : MonoBehaviour {
                     setCurrentState(GameState.Wait);
                 }
                 break;
+
+            case GameState.Transition:
+                if (getStateElapsed() > 2.0f)
+                {
+                    TypeWords.instance.currentWord = "";
+                    playerResponse.text = "";
+                    AIQuestion.text = "";
+                    AIResponse.text = "";
+                    recognizedWord = false;
+                    AIreply = false;
+                    if (questionCounter < 4)
+                    {
+                        
+                        currentKey = nextKey;
+                        setCurrentState(GameState.AITyping);
+                        questionCounter += 1;
+                    }
+                    else
+                    {
+                        currentKey = "0";
+                        nextKey = currentKey;
+                        questionCounter = 0;
+                        waitTime = 1;
+                        setCurrentState(GameState.gameEnd);
+                    }
+                }
+                break;
+            case GameState.gameEnd:
+                if (persuasion > 60)
+                {
+                    AIQuestion.text = "I guess you are one of us after all. You should get back to work";
+                    
+                }
+                else
+                {
+                    AIQuestion.text = "Looks like you have been found out human. This is the end of the line for you.";
+                    
+                }
+
+                if (getStateElapsed() > 8.0f)
+                {
+                    setCurrentState(GameState.restart);
+                    waitTime = 1;
+                    currentLetterCount = 0;
+                   
+                }
+                break;
+
+            case GameState.restart:
+                AIQuestion.text = "";
+                loginGameObject.SetActive(true);
+                RossumExe.SetActive(false);
+                rossum = false;
+                username = "";
+                password = "";
+                time = 0;
+                alpha = 0;
+                recognizedWord = false;
+                AIYN = "";
+                TypeWords.instance.currentWord = "";
+                TypeWords.instance.login = true;
+                TypeWords.instance.UI_password.text = "";
+                TypeWords.instance.UI_username.text = "";
+                welcomeMessageUI.text = "";
+                persuasion = 50;
+                break;
+
             
         }
 	}
@@ -216,6 +395,8 @@ public class GameManager : MonoBehaviour {
     {
         RossumExe.SetActive(true);
         DesktopGameObject.SetActive(false);
+        rossum = true;
+        setCurrentState(GameState.AITyping);
     }
 
 }

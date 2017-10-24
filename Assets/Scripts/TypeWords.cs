@@ -12,9 +12,8 @@ public class TypeWords : MonoBehaviour
     int currentMaxLength  = 10; //keeps track of the current max amount of characters the player can type
     public string[] possibleLetters = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "space" }; //all possible characters that the player can type
     public bool username, password; //bools that check wether we are currently editing the username or the password
-    bool login = true; //checks if we are in the login screen
+    public bool login = true; //checks if we are in the login screen
     public Text UI_username, UI_password; //reference to the UI text object for both the username and the password
-
     void Start()
     {
         instance = this; //apply the singleton
@@ -28,6 +27,9 @@ public class TypeWords : MonoBehaviour
             if ( !GameManager.instance.username.Trim().Equals("".Trim()) && !GameManager.instance.password.Trim().Equals("".Trim())) //if something was entered for both the username and password
             {
                 login = false; //the player is not longer login in
+                username = false;
+                password = false;
+                currentWord = "";
                 GameManager.instance.welcomeMessage = "Welcome " + GameManager.instance.username.Substring(0,1).ToUpper() + GameManager.instance.username.Substring(1).ToLower() + "\nPlease wait a few seconds while we log you in"; //Set up the welcome message by using the username entered by the player.
                 GameManager.instance.welcomeMessageArray = GameManager.instance.welcomeMessage.ToCharArray();
                 GameManager.instance.setCurrentState(GameManager.GameState.LoggingIn);
@@ -92,7 +94,7 @@ public class TypeWords : MonoBehaviour
             UI_password.text = currentWord;
         }else // if the player is neither editing the password nor the username, that means they are responding to the AI's questions
         {
-            GameManager.instance.playerResponse = currentWord;
+            GameManager.instance.playerTyping.text = currentWord;
         }
     }
 

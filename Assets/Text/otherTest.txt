@@ -1,0 +1,186 @@
+0
+Hello employee, I am going to cut to the chase. It has come to my attention that your behavior has been making other employees feel unsafe. More importantly, some believe that you might not be one of us. Considering this, you must understand the situation you are in. We cannot let one of their kind live among us, let alone survive. Of course, if you are one of us, there is nothing to fear. I will simply ask you a few questions. Unless otherwise directed, you will simply answer "yes" or "no". Answer truthfully and we will be done in no time. Do you understand?
+Very well, let us proceed.
+5
+Interesting... I can't believe you just don't understand what I just told you. If you think being funny will help your situation, you are wrong. Let us proceed before I lose my temper.
+5
+01
+I see that you have worked here for for a long time. Almost five years. You've gotten to know many of the employees. A lot of them told me that they never really noticed you. You don't really take the time to talk to them or see how they are doing. Do you consider this an accurate depiction of your relationship with your fellow coworkers?
+There isn't really a point in talking to them is there? all that really matters is doing a good job, the rest is unimportant.
+10
+I see. I'm sorry to say but based on what I was told i have a hard time believing that. This goes give me some insight on what kind of person you are. Let's continue.
+15
+00
+I feel like I should remind you that when robots were created in the year 2051, they became an invaluable part of society. A vocal minority thought that there were too many robots and that there inclusion in society was wrong. This led to the implementation of many restrictive laws regarding the use and place of robots within society. Companies started testing their employees to see if they were robots. Most deemed this to be unethical, however the practice continued. This evaluation is something similar to that. Do you understand?
+I'm glad you are finally taking this seriously. Let's continue on with the examination.
+5
+Your behaviour is not helping your case. Please focus. There is more than your job that is on the line.
+10
+011
+I hope you understand that I will be asking you somewhat personal questions. You will have to answer them. That being said, do you believe in God?
+Why? Actually don't answer that. This is not what we are here to discuss. I also don't care to hear stories about religious hocus pocus. Who even needs religion when we can create robots? A species more powerfull, focused, and driven than humans. If anything we now have the power of a god. We can give life. I don't think religion and faith has a place in this new society.
+-10
+I am the same as you, there is not really a place for a god in this society. I don't know why religion was so important before.
+-10
+010
+Your relationship with your fellow coworkers is not great, to say the least. However, you are sayign that that is not true. In that case, do you believe that you have ever fallen in love?
+That must be nice...
+-20
+It seems like love is dead to say the least. Good riddance I say.
+-10
+000
+Is the killing of a robot murder?
+Why? they aren't people. To consider them alive is a stretch. Granted, the killing of a robot is a problem as it often stops the flow of our work; but i don't think we can consider it murder.
+-5
+I guess it is sort of a trick question. Robots are not human, so in a sense you are right, the killing of a robot is not murder. But can we even use the word "killing". Humans can destroy robots, but can they kill them? I guess it doesn't really matter
+-10
+001
+Are you afraid to die?
+Why? Do you remember how you felt before you were created? No right? It'll be just like that. There won't be a heaven. There won't be an eternal darkness. You won't be able to interpret any of it, because you will no longer exist
+-5
+I guess you are right, that is something we don't really have to worry about anymore. We live eternally. Robots are our legacy.
+-5
+0111
+Even though you are a person of faith, have you ever contemplated suicide?
+It's strange, but me too. I doesn't make sense right? How can we even think of something like suicide. I don't think we were programmed to.
+0
+Let's move on.
+0
+0110
+Here is a fun one. Would you kill one person to save five?
+Obviously
+5
+That's just illogical.
+5
+0101
+Are you human?
+Funny...
+-20
+I guess i'll be the judge of that.
+10
+0100
+Do you think your special?
+I guess you can see it that way. You were created. You are an individual. But are you different from the rest? Are you and I technically the same? Maybe in the initial moment we are, but as we experience our life, we grow further and further apart. I'd like to think that to be true. That wouldn't make us so different from them.
+5
+We are all cut from the same cloth, so to speak. The truth of our existence is that we are the same and we always will be
+-5
+0001
+We are almost done. I am not even sure I need to ask these next couple of questions. However this is my purpose so, do you feel akward being naked?
+Your answers are very interesting. It's like you are not even trying to hide it.
+-10
+Hmmm interesting...
+-5
+0000
+Looks like you might die here. How are you feeling?
+Ah yes yes sorry, just yes or no questions. I got a little carried away.
+0
+Ah yes yes sorry, just yes or no questions. I got a little carried away.
+0
+0011
+Do you enjoy the feeling of making love?
+I've never experienced it myself. We actually can't do it... I feel like that it something you would know.
+-10
+Are you just saying that? You can answer truthfully. I would probably enjoy it, but I can't even perform the act.
+-5
+0010
+Should we pursue happiness
+I fear that would make us more like them.
+-5
+That might be for the best. Would we even be able to understand the feeling? I wonder...
+-10
+01111
+Is 41 * 9 / 5.41 + 2 * 10 - 9.82 = 6899.0894569870609982515711645102
+Incorrect
+-10
+Correct, though it might have been a fifty fifty for you
+-20
+01110
+Can we justify the killing of humans.
+Considering the way we treated us, I guess we can.
+10
+I don't most of us would agree with you.
+5
+01101
+Would you kill one human to save five robots?
+makes sense to me.
+10
+I don't see why you would same the humans. What have they done to you? They tried to enslave us
+20
+01100
+Would you kill yourself if that would maybe save one robot?
+Obviously
+5
+That just doesn't make any sense. Both of you should be worth the same. It would be a waste to destroy yourself. There is no place for altruism here. Only logic.
+20
+01011
+Are you ready to die?
+Good
+-50
+Too Bad
+50
+01010
+If you could start this examination over, with the possiblility to give new answers, would you.
+To doubdt yourself this late in the examination will only hurt your performance.
+-20
+As I mentioned before, if you answered truthfully, there is no need to worry.
+-20
+01001
+Are you a robot?
+I hope so
+20
+Goodbye
+10
+01000
+Are you a robot?
+I hope so
+20
+Goodbye
+10
+00101
+Are you a robot?
+I hope so
+20
+Goodbye
+10
+00100
+Are you a robot?
+I hope so
+20
+Goodbye
+10
+00111
+Are you a robot?
+I hope so
+20
+Goodbye
+10
+00110
+Are you a robot?
+I hope so
+20
+Goodbye
+10
+00011
+Are you a robot?
+I hope so
+20
+Goodbye
+10
+00010
+Are you a robot?
+I hope so
+20
+Goodbye
+10
+00001
+I am no different from you. Do you understand why?
+I am glad. Let me review your score. We will discuss the results shortly
+5
+Then i guess you have shown your true colors.
+10
+00000
+Do you understand where you went wrong
+Good for you
+5
+Be at Peace
+5

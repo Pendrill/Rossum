@@ -1,11 +1,4 @@
 Welcome Employee!
 
-My name is Quinten Harle. I am head of "HR" here at Rossum Corp.
-If you are reading this it most likely means that there were complaints regarding your behaviour.
-You have been called in to answer a few questions and see if there really is a problem.
-You must understand, our top priority is to make sure our employees work in safe environment, free of any possible danger or intruders.
-You have nothing to worry about, simply answer our questions correctly and you will be free to return to your work.
-There are no tricks, just answer truthfully and everything will be fine.
-Once you are ready, simply launch the ROSSUM.exe.
-
+My name is Quinten Harle. I am head of "HR" here at Rossum Corp. If you are reading this it most likely means that there were complaints regarding your behaviour. You have been called in to answer a few questions and see if there really is a problem. You must understand, our top priority is to make sure our employees work in safe environment, free of any possible danger or intruders. You have nothing to worry about, simply answer our questions correctly and you will be free to return to your work. There are no tricks, just answer truthfully and everything will be fine. Once you are ready, simply launch the ROSSUM.exe.
 -Harle
