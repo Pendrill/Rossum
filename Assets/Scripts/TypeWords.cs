@@ -14,6 +14,7 @@ public class TypeWords : MonoBehaviour
     public bool username, password; //bools that check wether we are currently editing the username or the password
     public bool login = true; //checks if we are in the login screen
     public Text UI_username, UI_password; //reference to the UI text object for both the username and the password
+
     void Start()
     {
         instance = this; //apply the singleton
@@ -27,16 +28,16 @@ public class TypeWords : MonoBehaviour
             if ( !GameManager.instance.username.Trim().Equals("".Trim()) && !GameManager.instance.password.Trim().Equals("".Trim())) //if something was entered for both the username and password
             {
                 login = false; //the player is not longer login in
-                username = false;
-                password = false;
-                currentWord = "";
+                username = false; //player is no longer editing the username
+                password = false; //player is no longer editing the password
+                currentWord = ""; //the current word needs to be reset
                 GameManager.instance.welcomeMessage = "Welcome " + GameManager.instance.username.Substring(0,1).ToUpper() + GameManager.instance.username.Substring(1).ToLower() + "\nPlease wait a few seconds while we log you in"; //Set up the welcome message by using the username entered by the player.
-                GameManager.instance.welcomeMessageArray = GameManager.instance.welcomeMessage.ToCharArray();
-                GameManager.instance.setCurrentState(GameManager.GameState.LoggingIn);
-                Debug.Log("entered username and password, now go to next screen"); //we proceed to the loading screen for the desktop
+                GameManager.instance.welcomeMessageArray = GameManager.instance.welcomeMessage.ToCharArray(); //have all the characters of the welcome message be stored in a char array
+                GameManager.instance.setCurrentState(GameManager.GameState.LoggingIn); //we proceed to the loading screen for the desktop
+                //Debug.Log("entered username and password, now go to next screen"); 
             }else //if there are no inputs for either the password of the username
             {
-                Debug.Log("either password or username was not entered, redo accordingly"); //don't let the player proceed to the desktop's loading screen
+                //Debug.Log("either password or username was not entered, redo accordingly"); //don't let the player proceed to the desktop's loading screen
                 GameManager.instance.setCurrentState(GameManager.GameState.Wait); //set the state to wait
                 if (GameManager.instance.username.Trim().Equals("".Trim())) //checks if the username is still an empty string
                 {
@@ -87,14 +88,14 @@ public class TypeWords : MonoBehaviour
         if (username) //Is the player wanting to edit the username
         {
             GameManager.instance.username = currentWord; //if so we need to update the unsername in the scene and the gamemanager
-            UI_username.text = currentWord;
+            UI_username.text = currentWord; //update the user name with the current word the player is typing
         }else if (password)//if the player is editing the password,
         {
             GameManager.instance.password = currentWord; // we need to update the password in the scene and in the gamemanager
-            UI_password.text = currentWord;
+            UI_password.text = currentWord; //update the password with the current word the player is typing
         }else // if the player is neither editing the password nor the username, that means they are responding to the AI's questions
         {
-            GameManager.instance.playerTyping.text = currentWord;
+            GameManager.instance.playerTyping.text = currentWord; //update the section where the player is typing to reflect what they are actually typing.
         }
     }
 
@@ -140,8 +141,8 @@ public class TypeWords : MonoBehaviour
     }
 
     /// <summary>
-    /// This is accessed by pressing a button in the login scene. By pressing outside of the username and password buttons, the player returns to the 
-    /// wait state and can no longer type.
+    /// This is accessed by pressing when the player clicks on something other than the last button clicked. the player returns to the 
+    /// wait state and can no longer type until they click on a new button.
     /// </summary>
     public void stopTyping()
     {
